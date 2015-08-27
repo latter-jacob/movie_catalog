@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+
+  <body>
+
+    <ul>
+      <h1><%= id%></h1>
+      <table>
+         <tr>
+           <th>genres</th>
+           <th>Studio</th>
+           <th>actor</th>
+           <th>character</th>
+         </tr>
+         <% film.each do |row| %>
+         <tr>
+           <td><%=row["genres"]%></td>
+           <td><%=row["studio"]%></td>
+           <td><a href='/actors/<%= row['actor'] %>'><%= row['actor'] %></a></td>
+           <td><%=row["character"]%></td>
+         </tr>
+        <% end %>
+      </table>
+
+
+    </ul>
+
+  </body>
+</html>

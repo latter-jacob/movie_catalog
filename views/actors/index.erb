@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Actors</title>
+  </head>
+
+  <body>
+    <h2>Actors</h2>
+
+
+    <ul>
+      <table>
+         <tr>
+           <th>Actors</th>
+         </tr>
+           <% actors.each do |row| %>
+         <tr><li><a href='actors/<%= row['name'] %>'><%= row['name'] %></a></li></tr>
+         <td><a href='movies/<%=row['title']%>'><%=row['title']%></a></td>
+
+        <% end %>
+      </table>
+    </ul>
+
+  </body>
+</html>
+
+A
